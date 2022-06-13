@@ -2,6 +2,7 @@
 
 #include "main.h"
 #include "Vector2D.h"
+#include "Target.h"
 
 class Vehicle
 {
@@ -11,8 +12,9 @@ public:
 	void update();
 
 	void applyForce(Vector2D* force);
-	Vector2D arrive(Vector2D* target);
-	Vector2D seek(Vector2D* target);
+	void edge();
+	void avoid(Target* obs);
+	Vector2D getnormalPoint(Target* p, Vector2D* pos, Vector2D* vel);
 	Vector2D Rradian(float x, float y, float radian);
 
 protected:
@@ -26,11 +28,14 @@ protected:
 	Vector2D* rdi2;
 	Vector2D* rdi3;
 
+	Vector2D* normalPoint;
+	Vector2D* normal;
+	Vector2D* m_end;
+	float d1;
+	float d2;
+
 	int maxSpeed;
 	int r;
 	float maxForce;
-
-	float distance;
-	const float dec;
-	float speed;
+	float dist;
 };
