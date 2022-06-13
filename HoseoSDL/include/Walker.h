@@ -1,13 +1,24 @@
 #pragma once
 
 #include "main.h"
-
+#include "Game.h"
+#include "InputHandler.h"
+#include "Vector2D.h"
+#include "Target.h"
+#include "Vehicle.h"
+#include <vector>
 
 class Walker 
 {
-  int _x, _y;
 public:
-  Walker(int x, int y);
+  Walker();
   void draw(SDL_Renderer* renderer);
   void update();
+
+private:
+	std::vector<Vehicle*> m_Vehicle;
+	std::vector<Target*> m_Target;
+	Vector2D* m_mouse;
+	Vector2D* steering;
+	Vector2D* T_steering;
 };

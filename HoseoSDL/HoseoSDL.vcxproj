@@ -146,9 +146,17 @@
     <ClCompile Include="src\InputHandler.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Walker.cpp" />
+    <ClCompile Include="Target.cpp" />
+    <ClCompile Include="Vehicle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Game.h" />
+    <ClInclude Include="include\InputHandler.h" />
     <ClInclude Include="include\main.h" />
+    <ClInclude Include="include\Vector2D.h" />
+    <ClInclude Include="include\Walker.h" />
+    <ClInclude Include="Target.h" />
+    <ClInclude Include="Vehicle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
